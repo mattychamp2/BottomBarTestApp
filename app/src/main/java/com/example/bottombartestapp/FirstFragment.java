@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import java.io.*;
 import androidx.fragment.app.Fragment;
 
+import com.example.bottombartestapp.R;
+
 public class FirstFragment extends Fragment {
 
     public FirstFragment(){
@@ -19,4 +21,14 @@ public class FirstFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
+
+    public static FirstFragment newInstance() {
+
+        Bundle args = new Bundle();
+
+        FirstFragment fragment = new FirstFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
 }
